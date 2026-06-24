@@ -1,0 +1,282 @@
+@font-face {
+  font-family: 'JuliaMono';
+  src: url('../fonts/JuliaMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JuliaMono';
+  src: url('../fonts/JuliaMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JuliaMono';
+  src: url('../fonts/JuliaMono-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ─── SPACING SCALE ──────────────────────────────────────
+   xs: 0.4rem  |  sm: 0.75rem  |  md: 1.25rem  |  lg: 2rem
+─────────────────────────────────────────────────────────── */
+
+/* ─── LIGHT THEME ────────────────────────────────────── */
+body.light {
+  --bg:           #ffffff;
+  --bg-subtle:    #f5f4f1;
+  --border:       #e0ddd8;
+  --text:         #1a1a18;
+  --text-body:    #3a3a36;
+  --text-muted:   #999994;
+  --accent:       #7a1515;
+  --accent-hover: #a0401a;
+  --owl:          rgba(0, 0, 0, 0.06);
+}
+
+/* ─── DARK THEME ─────────────────────────────────────── */
+body.dark {
+  --bg:           #141412;
+  --bg-subtle:    #1c1b18;
+  --border:       #2e2b27;
+  --text:         #e4e0d8;
+  --text-body:    #a8a49c;
+  --text-muted:   #5a5750;
+  --accent:       #7aaa8a;
+  --accent-hover: #9dc8ad;
+  --owl:          rgba(255, 255, 255, 0.055);
+}
+
+/* ─── RESET ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── BASE ───────────────────────────────────────────── */
+html { font-size: 21px; }
+
+body {
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text-body);
+  line-height: 1.7;
+  padding: 0 1.25rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* ─── LAYOUT ─────────────────────────────────────────── */
+.content {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ─── OWL BACKGROUND ─────────────────────────────────── */
+.owl-bg {
+  position: absolute;
+  right: -18px;
+  bottom: -12px;
+  width: 220px;
+  height: 280px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.owl-bg path,
+.owl-bg circle,
+.owl-bg ellipse,
+.owl-bg line {
+  stroke: var(--owl);
+  transition: stroke 0.2s;
+}
+
+/* ─── HEADER ─────────────────────────────────────────── */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.bengali {
+  font-family: 'Noto Serif Bengali', serif;
+  font-weight: 400;
+  font-size: 0.88em;
+  color: var(--text-muted);
+  margin-left: 0.4em;
+}
+
+header nav {
+  margin-top: 0.3rem;
+  display: flex;
+  gap: 1.25rem;
+}
+
+header nav a {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+header nav a:hover { color: var(--accent); }
+
+/* ─── THEME TOGGLE ───────────────────────────────────── */
+.theme-toggle {
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+  margin-left: 1.25rem;
+  align-self: flex-start;
+  margin-top: 0.05rem;
+  color: var(--accent);
+  transition: color 0.15s;
+}
+
+.theme-toggle:hover { color: var(--accent-hover); }
+
+.theme-toggle .material-symbols-outlined {
+  font-size: 1.4rem;
+  display: block;
+}
+
+
+/* ─── MAIN ───────────────────────────────────────────── */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── HEADINGS ───────────────────────────────────────── */
+h2 {
+  font-weight: 600;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 1.25rem 0 0.75rem;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin: 1.25rem 0 0.4rem;
+}
+
+/* ─── BODY TEXT ──────────────────────────────────────── */
+p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-body);
+  margin-bottom: 0.75rem;
+}
+
+ul, ol { padding-left: 1.25rem; margin-bottom: 0.75rem; }
+li { font-size: 0.9rem; font-weight: 300; margin-bottom: 0.4rem; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.25rem 0;
+}
+
+blockquote {
+  border-left: 2px solid var(--border);
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 1.25rem 0;
+}
+
+/* ─── LINKS ──────────────────────────────────────────── */
+a, a:link, a:visited {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* ─── CODE ───────────────────────────────────────────── */
+code, kbd, samp {
+  font-family: 'JuliaMono', 'Fira Mono', monospace;
+  font-size: 0.75em;
+  background: var(--bg-subtle);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  color: var(--text-body);
+}
+
+pre {
+  font-family: 'JuliaMono', 'Fira Mono', monospace;
+  font-size: 0.75em;
+  background: var(--bg-subtle);
+  padding: 1.25rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  line-height: 1.6;
+  margin: 1.25rem 0;
+  border: 1px solid var(--border);
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* ─── IMAGES ─────────────────────────────────────────── */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.25rem auto;
+}
+
+/* ─── FOOTER ─────────────────────────────────────────── */
+footer {
+  margin-top: 2rem;
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── MOBILE ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  html { font-size: 17px; }
+
+  header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  header nav { gap: 1rem; }
+
+  .theme-toggle { margin-left: 0; }
+}
