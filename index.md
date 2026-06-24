@@ -20,18 +20,11 @@ My current work connects ecological restoration, community engagement, field mon
 - Plant biology and habitat restoration
 - Biostatistics and ecological data analysis
 
-## Selected Publications
-
-1. Mahanty, S., Roy, S., Mandal, S., Mahanti, B., Mahapatra, M., & Majumder, S. (2024). [Impact of average rainfall and the COVID-19 lockdown on the abundance and nesting habits of the Asian openbill stork (*Anastomus oscitans*, Boddaert)](https://doi.org/10.1007/s43388-024-00208-x). *Ornithology Research, 33*(1), Article 8.
-2. Saha, D., Mandal, S., Roy, S., Mahanty, S., Sinha, K. N., Maiti, R., & Majumder, S. (2025). [Micronutrients and dengue fever: Exploring their role in effective management strategies](https://doi.org/10.2174/0115734013340202241108062720). *Current Nutrition & Food Science, 21*(6).
-3. Mandal, S., Mahanty, S., Roy, S., Saha, D., Mallick, S., Choudhuri, S. K., & Majumder, S. (2024). [Role of metal complexes in inhibition of cancer growth factors](https://doi.org/10.18103/mra.v11i12.4996). *Medical Research Archives, 11*(12), Article 4996.
-
 ## Education
 
 **Bachelor of Science in Zoology**  
 Bankura Sammilani College, Bankura University  
 September 2021 - August 2024  
-CGPA: 8.10
 
 ## Contact
 
